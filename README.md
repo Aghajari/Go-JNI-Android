@@ -133,6 +133,10 @@ jint Java_packagename_ClassName_integerTest(JNIEnv *env, jclass clazz) {
 package packagename;
 
 public class ClassName {
+    static {
+        System.loadLibrary("native-lib-go"); // CMakeLists.txt => ${GO_Lib}
+    }
+    
     public static native String helloWorld();
     public static native int integerTest();
 }
