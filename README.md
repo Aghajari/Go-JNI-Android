@@ -142,3 +142,15 @@ public class ClassName {
 }
 ```
 14. And everything is done!
+
+
+You can also directly link java & go function like this :
+```go
+//export Java_packagename_ClassName_goTest
+func Java_packagename_ClassName_goTest(env uintptr, clazz uintptr) int {
+    return 100
+}
+```
+```java
+public static native int goTest();
+```
